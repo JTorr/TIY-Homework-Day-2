@@ -1,0 +1,9 @@
+Hangman Game:
+--Pull a random word from a dictionary, excel file or array
+--Count the characters and output a "_" for each character
+--Prompt user to choose a letter
+--If letter has been chosen before, output error and prompt again
+--If letter is present, output an updated "word" with that letter filled in &
+remove that letter from available letters & prompt again
+--If letter was not present, reduce the number of available body parts by 1 & prompt again
+--If available body parts == 0, output "You die" and exit
