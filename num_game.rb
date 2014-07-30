@@ -19,7 +19,7 @@ def computer_guess(answer)
   end
 end
 
-computer_guess(gets.chomp)
+computer_guess(44)
 
 
 
