@@ -1,6 +1,22 @@
 class GuessingGame
-    def initialize
-      @answer = (0..100).to_a.sample
+  #Initializing with default answer of nil for testing
+  #purposes. Allows you to define an answer when
+  #creating the game. If "nil" were not specified,
+  #the program would require the answer to be defined
+  #when a new GuessingGame is created.
+  #allows game_spec to read the
+  #instance variable @tries_left
+  attr_reader :tries_left
+  attr_reader :won
+
+    def initialize(answer=nil)
+      @answer = if answer
+        answer
+      else
+        (0..100).to_a.sample
+      end
+
+
       @tries_left = 5
       @won = false
     end
@@ -12,9 +28,9 @@ class GuessingGame
       if number == @answer
         @won = true
       elsif number < @answer
-        puts "Your guess is too low"
+        "Your guess is too low"
       else
-        puts "Your guess is too high"
+        "Your guess is too high"
       end
     end
 
@@ -27,4 +43,6 @@ class GuessingGame
       #makes @won true
       @won
     end
+
+
 end
